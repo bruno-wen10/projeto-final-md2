@@ -1,13 +1,24 @@
 import { createGlobalStyle } from 'styled-components'
 
 export default createGlobalStyle`
+
+@import url("https://fonts.googleapis.com/css2?family=Poppies&display=swap");
+
+
+
+
+
+
   :root {
     --dark: #313131;
   }
 
   * {
+
     margin: 0;
     padding: 0;
+    font-family: "Poppies", sans-serif;
+
   }
 
   *, ::after, ::before {
@@ -21,6 +32,8 @@ export default createGlobalStyle`
   body, input, select, textarea {
     font-size: 1rem;
     color: var(--dark);
+
   }
+
 
 `

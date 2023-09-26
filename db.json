@@ -1,0 +1,439 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "active": true,
+      "type": "Médico",
+      "personalInfo": {
+        "firstName": "John",
+        "lastName": "Silva",
+        "email": "joaosilva@example.com",
+        "whatsApp": "+55 (11) 98765-4321"
+      },
+      "address": {
+        "zipCode": "12345-678",
+        "street": "Rua das Flores",
+        "number": "123",
+        "neighborhood": "Centro",
+        "city": "São Paulo",
+        "state": "SP",
+        "complement": "Apto 4A"
+      },
+      "resumeData": {
+        "specialty": "Cardiologia",
+        "desiredCity": "Tecnópolis",
+        "workplaces": "Hospital A, Hospital B",
+        "availability": "Período integral",
+        "about": "Médico cardiologista experiente...",
+        "observations": "",
+        "subscriptionPlan": "Premium"
+      }
+    },
+    {
+      "id": 2,
+      "active": true,
+      "type": "Médico",
+      "personalInfo": {
+        "firstName": "Maria",
+        "lastName": "Santos",
+        "email": "mariasantos@example.com",
+        "whatsApp": "+55 (21) 98765-4321"
+      },
+      "address": {
+        "zipCode": "54321-987",
+        "street": "Avenida Principal",
+        "number": "456",
+        "neighborhood": "Bairro Verde",
+        "city": "Rio de Janeiro",
+        "state": "RJ",
+        "complement": "Apto 3B"
+      },
+      "resumeData": {
+        "specialty": "Pediatria",
+        "desiredCity": "Designópolis",
+        "workplaces": "Hospital Infantil, Clínica Pediátrica",
+        "availability": "Meio período",
+        "about": "Pediatra dedicada...",
+        "observations": "Necessita de horários flexíveis",
+        "subscriptionPlan": "Básico"
+      }
+    },
+    {
+      "id": 3,
+      "active": true,
+      "type": "Médico",
+      "personalInfo": {
+        "firstName": "Lucas",
+        "lastName": "Ferreira",
+        "email": "lucasferreira@example.com",
+        "whatsApp": "+55 (31) 98765-4321"
+      },
+      "address": {
+        "zipCode": "98765-432",
+        "street": "Praça Central",
+        "number": "789",
+        "neighborhood": "Centro",
+        "city": "Belo Horizonte",
+        "state": "MG",
+        "complement": "Sala 2C"
+      },
+      "resumeData": {
+        "specialty": "Dermatologia",
+        "desiredCity": "Datópolis",
+        "workplaces": "Clínica Dermatológica",
+        "availability": "Período integral",
+        "about": "Dermatologista experiente...",
+        "observations": "",
+        "subscriptionPlan": "Premium"
+      }
+    },
+    {
+      "id": 4,
+      "active": false,
+      "type": "Contratante",
+      "personalInfo": {
+        "firstName": "Ana",
+        "lastName": "Rodrigues",
+        "email": "anarodrigues@example.com",
+        "whatsApp": "+55 (41) 98765-4321"
+      },
+      "address": {
+        "zipCode": "76543-210",
+        "street": "Rua dos Lírios",
+        "number": "789",
+        "neighborhood": "Vila Nova",
+        "city": "Curitiba",
+        "state": "PR",
+        "complement": "Apto 5D"
+      },
+      "resumeData": {
+        "specialty": "Ginecologia",
+        "desiredCity": "Saúdeville",
+        "workplaces": "Hospital da Mulher, Clínica Ginecológica",
+        "availability": "Período integral",
+        "about": "Ginecologista experiente...",
+        "observations": "",
+        "subscriptionPlan": "Premium"
+      }
+    },
+    {
+      "id": 5,
+      "active": true,
+      "type": "Médico",
+      "personalInfo": {
+        "firstName": "Ricardo",
+        "lastName": "Lima",
+        "email": "ricardolima@example.com",
+        "whatsApp": "+55 (51) 98765-4321"
+      },
+      "address": {
+        "zipCode": "98765-321",
+        "street": "Avenida das Palmeiras",
+        "number": "456",
+        "neighborhood": "Jardim Botânico",
+        "city": "Porto Alegre",
+        "state": "RS",
+        "complement": "Apto 6E"
+      },
+      "resumeData": {
+        "specialty": "Ortopedia",
+        "desiredCity": "Ortopolis",
+        "workplaces": "Hospital Ortopédico, Clínica Ortopédica",
+        "availability": "Período integral",
+        "about": "Ortopedista experiente...",
+        "observations": "",
+        "subscriptionPlan": "Premium"
+      }
+    },
+    {
+      "id": 6,
+      "active": true,
+      "type": "Médico",
+      "personalInfo": {
+        "firstName": "Isabel",
+        "lastName": "Ramos",
+        "email": "isabelramos@example.com",
+        "whatsApp": "+55 (61) 98765-4321"
+      },
+      "address": {
+        "zipCode": "65432-109",
+        "street": "Rua das Árvores",
+        "number": "789",
+        "neighborhood": "Centro",
+        "city": "Brasília",
+        "state": "DF",
+        "complement": "Sala 3F"
+      },
+      "resumeData": {
+        "specialty": "Oftalmologia",
+        "desiredCity": "Visãopolis",
+        "workplaces": "Clínica Oftalmológica",
+        "availability": "Período integral",
+        "about": "Oftalmologista experiente...",
+        "observations": "",
+        "subscriptionPlan": "Premium"
+      }
+    },
+    {
+      "id": 7,
+      "active": false,
+      "type": "Médico",
+      "personalInfo": {
+        "firstName": "Gustavo",
+        "lastName": "Fernandes",
+        "email": "gustavofernandes@example.com",
+        "whatsApp": "+55 (71) 98765-4321"
+      },
+      "address": {
+        "zipCode": "12345-678",
+        "street": "Avenida das Estrelas",
+        "number": "123",
+        "neighborhood": "Centro",
+        "city": "Salvador",
+        "state": "BA",
+        "complement": "Apto 2D"
+      },
+      "resumeData": {
+        "specialty": "Pneumologia",
+        "desiredCity": "Respirópolis",
+        "workplaces": "Hospital Pulmonar, Clínica Respiratória",
+        "availability": "Período integral",
+        "about": "Pneumologista experiente...",
+        "observations": "",
+        "subscriptionPlan": "Premium"
+      }
+    },
+    {
+      "id": 8,
+      "active": true,
+      "type": "Contratante",
+      "personalInfo": {
+        "firstName": "Carolina",
+        "lastName": "Mendes",
+        "email": "carolinamendes@example.com",
+        "whatsApp": "+55 (84) 98765-4321"
+      },
+      "address": {
+        "zipCode": "98765-234",
+        "street": "Rua dos Cactos",
+        "number": "789",
+        "neighborhood": "Centro",
+        "city": "Natal",
+        "state": "RN",
+        "complement": "Apto 1A"
+      },
+      "resumeData": {
+        "specialty": "Psiquiatria",
+        "desiredCity": "Mentopolis",
+        "workplaces": "Hospital Psiquiátrico, Clínica de Saúde Mental",
+        "availability": "Período integral",
+        "about": "Psiquiatra experiente...",
+        "observations": "",
+        "subscriptionPlan": "Premium"
+      }
+    },
+    {
+      "id": 9,
+      "active": false,
+      "type": "Contratante",
+      "personalInfo": {
+        "firstName": "Miguel",
+        "lastName": "Oliveira",
+        "email": "migueloliveira@example.com",
+        "whatsApp": "+55 (61) 98765-4321"
+      },
+      "address": {
+        "zipCode": "87654-321",
+        "street": "Avenida dos Pinheiros",
+        "number": "456",
+        "neighborhood": "Jardim das Oliveiras",
+        "city": "Brasília",
+        "state": "DF",
+        "complement": "Apto 7B"
+      },
+      "resumeData": {
+        "specialty": "Neurologia",
+        "desiredCity": "Neuropólis",
+        "workplaces": "Hospital Neurológico, Clínica Neurológica",
+        "availability": "Período integral",
+        "about": "Neurologista experiente...",
+        "observations": "",
+        "subscriptionPlan": "Premium"
+      }
+    },
+    {
+      "id": 10,
+      "active": true,
+      "type": "Contratante",
+      "personalInfo": {
+        "firstName": "Larissa",
+        "lastName": "Fernandes",
+        "email": "larissafernandes@example.com",
+        "whatsApp": "+55 (71) 98765-4321"
+      },
+      "address": {
+        "zipCode": "76543-210",
+        "street": "Rua das Margaridas",
+        "number": "789",
+        "neighborhood": "Vila das Flores",
+        "city": "Salvador",
+        "state": "BA",
+        "complement": "Apto 4C"
+      },
+      "resumeData": {
+        "specialty": "Gastroenterologia",
+        "desiredCity": "Gastroville",
+        "workplaces": "Hospital Gastro, Clínica Gastrointestinal",
+        "availability": "Período integral",
+        "about": "Gastroenterologista experiente...",
+        "observations": "",
+        "subscriptionPlan": "Premium"
+      }
+    },
+    {
+      "id": 11,
+      "active": true,
+      "type": "Contratante",
+      "personalInfo": {
+        "firstName": "Diego",
+        "lastName": "Ribeiro",
+        "email": "diegoribeiro@example.com",
+        "whatsApp": "+55 (41) 98765-4321"
+      },
+      "address": {
+        "zipCode": "98765-432",
+        "street": "Avenida Central",
+        "number": "456",
+        "neighborhood": "Centro",
+        "city": "Curitiba",
+        "state": "PR",
+        "complement": "Apto 8D"
+      },
+      "resumeData": {
+        "specialty": "Otorrinolaringologia",
+        "desiredCity": "Otorrinoville",
+        "workplaces": "Hospital Otorrino, Clínica Otorrinolaringológica",
+        "availability": "Período integral",
+        "about": "Otorrinolaringologista experiente...",
+        "observations": "",
+        "subscriptionPlan": "Premium"
+      }
+    },
+    {
+      "id": 12,
+      "active": false,
+      "type": "Contratante",
+      "personalInfo": {
+        "firstName": "Camila",
+        "lastName": "Melo",
+        "email": "camilamelo@example.com",
+        "whatsApp": "+55 (51) 98765-4321"
+      },
+      "address": {
+        "zipCode": "65432-109",
+        "street": "Rua das Montanhas",
+        "number": "789",
+        "neighborhood": "Vila dos Lagos",
+        "city": "Porto Alegre",
+        "state": "RS",
+        "complement": "Apto 9E"
+      },
+      "resumeData": {
+        "specialty": "Urologia",
+        "desiredCity": "Uroville",
+        "workplaces": "Hospital Urológico, Clínica Urológica",
+        "availability": "Período integral",
+        "about": "Urologista experiente...",
+        "observations": "",
+        "subscriptionPlan": "Premium"
+      }
+    },
+    {
+      "id": 13,
+      "active": true,
+      "type": "Contratante",
+      "personalInfo": {
+        "firstName": "Juliana",
+        "lastName": "Almeida",
+        "email": "julianaalmeida@example.com",
+        "whatsApp": "+55 (61) 98765-4321"
+      },
+      "address": {
+        "zipCode": "12345-678",
+        "street": "Avenida das Praias",
+        "number": "123",
+        "neighborhood": "Beira Mar",
+        "city": "Fortaleza",
+        "state": "CE",
+        "complement": "Apto 6A"
+      },
+      "resumeData": {
+        "specialty": "Dentista",
+        "desiredCity": "Odontópolis",
+        "workplaces": "Clínica Odontológica",
+        "availability": "Período integral",
+        "about": "Dentista experiente...",
+        "observations": "",
+        "subscriptionPlan": "Premium"
+      }
+    },
+    {
+      "id": 14,
+      "active": true,
+      "type": "Contratante",
+      "personalInfo": {
+        "firstName": "Pedro",
+        "lastName": "Machado",
+        "email": "pedromachado@example.com",
+        "whatsApp": "+55 (84) 98765-4321"
+      },
+      "address": {
+        "zipCode": "98765-234",
+        "street": "Avenida dos Coqueiros",
+        "number": "456",
+        "neighborhood": "Cidade Jardim",
+        "city": "Natal",
+        "state": "RN",
+        "complement": "Apto 7F"
+      },
+      "resumeData": {
+        "specialty": "Psicologia",
+        "desiredCity": "Psicoville",
+        "workplaces": "Clínica de Psicologia",
+        "availability": "Período integral",
+        "about": "Psicólogo experiente...",
+        "observations": "",
+        "subscriptionPlan": "Premium"
+      }
+    },
+    {
+      "id": 15,
+      "active": true,
+      "type": "Médico",
+      "personalInfo": {
+        "firstName": "Laura",
+        "lastName": "Sousa",
+        "email": "laurasousa@example.com",
+        "whatsApp": "+55 (61) 98765-4321"
+      },
+      "address": {
+        "zipCode": "87654-321",
+        "street": "Rua das Montanhas",
+        "number": "789",
+        "neighborhood": "Vila dos Rios",
+        "city": "Brasília",
+        "state": "DF",
+        "complement": "Apto 8C"
+      },
+      "resumeData": {
+        "specialty": "Nutrição",
+        "desiredCity": "Nutriville",
+        "workplaces": "Clínica Nutricional",
+        "availability": "Período integral",
+        "about": "Nutricionista experiente...",
+        "observations": "",
+        "subscriptionPlan": "Premium"
+      }
+    }
+  ]
+}
