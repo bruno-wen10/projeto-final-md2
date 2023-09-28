@@ -23,7 +23,7 @@ import { useNavigate } from "react-router-dom";
       if(recoveredUser){
         setUser(JSON.parse(recoveredUser))
       }
-      setLoading(false) //ajuda a controlar o efeito de carregar p/ que a aplicação espere o user ser autorizado para entrar na aplicação. 
+      setLoading(false) //ajuda a controlar o efeito de carregar p/ que a aplicação espere o user ser autorizado para entrar na aplicação.
     },[])
 
     const login =({email, password, rememberMe}:UserProps) =>{
@@ -32,6 +32,7 @@ import { useNavigate } from "react-router-dom";
       // ir na API e criar um session
       const loggedUser = {
        id:'123',
+       name: 'Bruno',
        email,
        password,
        rememberMe,
