@@ -1,3 +1,4 @@
+  // importação dos icones
   import FramebuscarMedicos  from '../../../assets/img/Frame.png'
   import Dashboard from './icons/Dashboard.png'
   import dollar from './icons/dollar.png'
@@ -6,6 +7,8 @@
   import composition from './icons/composition.png'
   import remind from './icons/remind.png'
   import help from './icons/help.png'
+  
+  // IMPORTAÇÃO STYLED-COMPONENT
   import S from './menu-styled'
 
 

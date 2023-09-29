@@ -1,20 +1,45 @@
-import { Outlet } from "react-router-dom"
-import  {MenuSide}  from "./menu/menuExpensive"
-import {HeardTop} from './header/heard'
+import { Outlet } from 'react-router-dom'
+//IMPORT REACT
+import { useState } from 'react'
+//IMPORTAÇÃO COMPONENTES
+import { MenuSide } from './menu/menuExpensive'
+import { HeardTop } from './header/heard'
+import { MenuMinimize } from './menu/menuMinimizar'
+import MedicosEContratante from '../ui/cardMedicos/componenteMedicos'
+
+
+//IMPORTAÇÃO STYLED-COMPONENTS
 import S from './base-layout'
 
 
- const Layout = () => {
+
+
+const Layout = () => {
+  //Menu hamburguer
+  const [menuIsOpen, setMenuIsOpen] = useState(false)
+
+  const ToggleMenuHamburguer = () => {
+    setMenuIsOpen(!menuIsOpen)
+  }
+
   return (
     <S.Section>
-      <MenuSide/>
-      <article>
-        <HeardTop/>
+
+        {menuIsOpen ? <MenuSide /> : <MenuMinimize />}
+
+
+
+      <S.Article>
+      <HeardTop onHamburgClik={ToggleMenuHamburguer} />
         <main>
 
-          <Outlet/>
+          <S.Div>
+          <MedicosEContratante/>
+          </S.Div>
+
+          <Outlet />
         </main>
-      </article>
+      </S.Article>
     </S.Section>
   )
 }

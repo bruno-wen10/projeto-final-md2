@@ -1,23 +1,37 @@
 import { ContextAuth } from '@/components/Login/LoginInputs/contexts/context'
+
 import MiniMenu from '../icons/default.png'
 import { createContext, useContext, useState } from 'react'
 import IconsUser from '@/components/BaseLayout/icons/user.png'
 import logoutUser from '@/components/BaseLayout/icons/chevron down.png'
 import S from '@/components/BaseLayout/header/heder-styled'
+//import type
+
 //import Compodente
 import { OutUser } from './out&user'
-export const HeardTop = () => {
+
+ //typagem da função
+type HamburgProps = {
+  onHamburgClik: () => void;
+ }
+
+export const HeardTop = ({onHamburgClik}:HamburgProps) => {
   const { user, logout } = useContext(ContextAuth)
+
+  //Menu Sair
   const [menuAberto, setMenuAberto] = useState(false);
 
   const toggleLogoutMenu = ()=>{
     setMenuAberto(!menuAberto)
   }
 
+
+
+
   return (
     <S.Header>
       <S.DivDates1>
-        <img src={MiniMenu} alt="mini menu" />
+        <img src={MiniMenu} alt="mini menu" style={{ cursor: 'pointer' } }  onClick={onHamburgClik}  />
       </S.DivDates1>
       <S.DivDates>
         <div>
@@ -47,7 +61,7 @@ export const HeardTop = () => {
 }
 
 
-
+{/* // CODIGO PARA USAR COM API */}
         {/* {user?(
           <>
           <div>
