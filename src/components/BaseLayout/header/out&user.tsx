@@ -2,7 +2,7 @@ import User from '@/components/BaseLayout/icons/user2.png'
 import Out from '@/components/BaseLayout/icons/logout.png'
 import Union from '@/components/BaseLayout/icons/Union.png'
 import { useContext } from 'react'
-import { ContextAuth } from '@/components/Login/LoginInputs/contexts/context'
+import { ContextAuth } from '@/contexts/context'
 import { Link } from 'react-router-dom'
 
 // Styled-Component

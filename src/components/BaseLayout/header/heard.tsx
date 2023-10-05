@@ -1,4 +1,4 @@
-import { ContextAuth } from '@/components/Login/LoginInputs/contexts/context'
+import { ContextAuth } from '@/contexts/context'
 
 import MiniMenu from '../icons/default.png'
 import { createContext, useContext, useState } from 'react'

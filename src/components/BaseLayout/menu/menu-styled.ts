@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 const Nav = styled.nav`
 background-color: #046639;
-width: 271px;
-height: 100vh;
-flex-shrink: 0;
+width: 24vw;
+height: auto;
+
 `
 const DivContainer = styled.div`
 padding-top: 24px;
-margin-left: 46px;
+margin-left: 18px;
 margin-bottom: 24px;
 `
 const Ol = styled.ol`
@@ -28,19 +28,22 @@ letter-spacing: 0.2px;
   border-radius: 8px;
   background: var(--primria-azul-4, #B4E08E);
   color: var(--primria-azul-1, #046639);
-  font-size: 16px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 600;
   line-height: 150%; /* 24px */
   letter-spacing: 0.2px;
-  width: 255px;
-  height: 56px;
-  padding-top: 15px;
-  padding-left: 15px;
+  width: 200px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+
+
 }
 `
 const Image = styled.img`
-width: 24px;
+width: 23px;
 height: 24px;
 flex-shrink: 0;
 `

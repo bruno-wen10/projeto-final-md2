@@ -4,20 +4,17 @@ const Section = styled.section`
 display: flex;
 
 
+
 `
 const Article = styled.article`
 display: flex;
 flex-direction: column;
-flex: 1;
+width: 100vw;
 `
-const Div = styled.div`
-display: flex;
-justify-content: flex-end;
-margin: 25px;
+const Main = styled.main`
+width: 100%;
 `
-
-
 
 export default {
-Section, Article, Div
+Section, Article, Main
 }

@@ -7,14 +7,11 @@ import { HeardTop } from './header/heard'
 import { MenuMinimize } from './menu/menuMinimizar'
 import MedicosEContratante from '../ui/cardMedicos/componenteMedicos'
 
-
 //IMPORTAÇÃO STYLED-COMPONENTS
 import S from './base-layout'
+import LastUsersDashboard from '../ui/table/ReceptTable/ReceptTable'
 
-
-
-
-const Layout = () => {
+const BaseLayout = () => {
   //Menu hamburguer
   const [menuIsOpen, setMenuIsOpen] = useState(false)
 
@@ -24,23 +21,31 @@ const Layout = () => {
 
   return (
     <S.Section>
-
-        {menuIsOpen ? <MenuSide /> : <MenuMinimize />}
-
-
+      {menuIsOpen ? <MenuSide /> : <MenuMinimize />}
 
       <S.Article>
-      <HeardTop onHamburgClik={ToggleMenuHamburguer} />
-        <main>
+        <HeardTop onHamburgClik={ToggleMenuHamburguer} />
 
-          <S.Div>
-          <MedicosEContratante/>
-          </S.Div>
+        <S.Main>
+          {/* <DivContainer>
+            <MedicosEContratante />
+
+            <LastUsersDashboard />
+          </DivContainer> */}
 
           <Outlet />
-        </main>
+        </S.Main>
       </S.Article>
     </S.Section>
   )
 }
-export default Layout
+export default BaseLayout
+
+//IMPORTAÇÃO STYLED-COMPONENTS
+import styled from 'styled-components'
+
+const DivContainer = styled.div`
+display: flex;
+flex-direction: column;
+gap: 10px;
+`

@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui'
 import {useState, useContext } from 'react'
-import { ContextAuth } from '@/components/Login/LoginInputs/contexts/context'
+
 import { Inputs } from '@/components/ui/forms/input'
 
 
@@ -22,7 +22,6 @@ import {
 } from './login-input-styled'
 
 export const LoginInputs = () => {
-  const {authenticated, login} = useContext(ContextAuth)
 
 
   const [email, setEmail] = useState('')
@@ -33,8 +32,8 @@ export const LoginInputs = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
-    console.log('Submit', { email, password, rememberMe })
-    login({email, password, rememberMe})
+    console.log('Submit', { email, password })
+    login({email, password})
 
   }
   const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -60,7 +59,7 @@ export const LoginInputs = () => {
         <DivTitle>
           <H3>Seja bem vindo!</H3>
           <H1Title>Realize seu Login</H1Title>
-          <p>{authenticated}</p>
+
         </DivTitle>
 
         <form onSubmit={handleSubmit}>
@@ -111,5 +110,9 @@ export const LoginInputs = () => {
 
     </DivContainer>
   )
+}
+
+function login(arg0: { email: string; password: string }) {
+  throw new Error('Function not implemented.')
 }
 

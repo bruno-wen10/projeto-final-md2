@@ -4,6 +4,7 @@ const Header = styled.div`
   display: flex;
   justify-content: space-between;
   height: 13%;
+  width: 100%;
   padding-top: 20px;
   padding-left: 10px;
   padding-right: 40px;
