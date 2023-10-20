@@ -1,52 +1,54 @@
 import { type } from "os"
 import { title } from "process"
-import { ReactNode } from "react"
-
+import { ReactNode, useState } from "react"
+import { MappedUser } from "./ReceptTable"
 // styled component Table
 import {
   Table,
   THeader,
-  Td,
+  Th,
   TBody,
   TableRow,
   TdBody
 } from './dateTable/myTable'
+import { Pagnation } from "../../paginação/pagnation"
+import { PlanTable } from "../../Components-Pages/Plans/plans-table/table-plans"
 
 
 //Record<string, ReactNode> define um objeto onde as chaves são strings e os valores são do tipo ReactNode. ReactNode
 //é um tipo que pode representar qualquer coisa renderizável em React, como texto,
 //elementos React, componentes, etc.
-type TableRow = Record<string, string | number | ReactNode>
+
 
 type TableDateProps = {
-  columns: string[]
-  datesTable: TableRow[]
-}
+  columns: string[];
+  datesTable: MappedUser[] | PlanTable[];
+};
 
+export const TableComponent = ({ columns, datesTable }: TableDateProps)=>{
 
-export const TableComponent = ({columns, datesTable}:TableDateProps)=> {
 
    return (
     <Table>
       <THeader>
         <tr>
-        {/* Object.keys() é uma função JavaScript que retorna um array contendo as chaves (nomes das propriedades) de um objeto. Neste contexto, estamos usando data[0] para obter as chaves do primeiro objeto no array data, que representa a primeira linha de dados na tabela. */}
-        {columns.map((columText)=>(
-          <Td>{columText}</Td>
+
+        {columns.map((columText, index)=>(
+          <Th key={`${index}-tr`}>{columText}</Th>
         ))}
-
-
         </tr>
       </THeader>
+
       <tbody>
-      {datesTable.map((information)=>(
-        <TableRow>
-          {Object.values(information).map((dateLine)=>(
-            <TdBody>{dateLine}</TdBody>
+      {datesTable.map((information, index)=>(
+        <TableRow key={`${index}-tr`}>
+          {Object.values(information).map((dateLine, index)=>(
+            <TdBody key={`${index}-td`}>{dateLine}</TdBody>
           ))}
         </TableRow>
       ))}
       </tbody>
+      {/* <Pagnation /> */}
     </Table>
 
    )

@@ -8,58 +8,76 @@ import { CardDates } from './CardGenerico';
 // IMPORT ICONE IMG
 import EveryUser from'../../../BaseLayout/menu/icons/every-user.png'
 import PeopleSearch from './icons/people-search.png'
+// import Api
+import { fetchDataCardApi } from '@/api/Dasboard/Api-Dashboard';
+// Import Type
+import { ApiResponse, DoctorsContractor } from '@/Types/Dasboard/TypeCards';
 
 interface CardProps {
-  type: 'contratante' | 'medico'; // Indica o tipo do card
+  type: 'contratante' | 'medico' | 'total' | 'disponivel' | 'indisponivel'; // Indica o tipo do card
 
 }
 
+
 const Card= ({type }:CardProps) => {
 
-   const [cardsDashboard, setCardsDashboard] = useState([]);
+   const [cardsDashboard, setCardsDashboard] = useState<DoctorsContractor>({
+    total: 0,
+    available: 0,
+    unavailable: 0
+  });
+
+
+
 
 
 
   useEffect(()=>{
-     const getDatesDashboard = async () => {
+    const GetFetchDate =async () => {
       try{
-        const ApiUrl = 'Url aqui'
+        const apiDate:ApiResponse = await fetchDataCardApi()
+        if(type === 'medico'){
+          setCardsDashboard(apiDate.doctor)
+        } else if(type === 'contratante'){
+          setCardsDashboard(apiDate.contractor)
+        }
+        console.log('card:', apiDate.contractor)
 
-        const response = await axios.get(ApiUrl)
+      } catch(error){
+        console.error(`Erro:`, error)
+        throw error
+      }
 
-        //ver os dados que chegam da api
-        console.log('Dados da Api:', response.data)
-
-        setCardsDashboard(response.data)
-
-        }catch (error) {
-        // Se ocorrer um erro durante a solicitação
-        console.error('Erro ao buscar cards:', error);
-
-     }
     }
-    getDatesDashboard()
+
+
   }, [])
+
+
   return (
     <>
       <Médicos>{type === 'medico' ? 'Médicos' : 'Contratantes'}</Médicos>
 
       <DivContainer>
 
-        <CardDates titulo={'Total'} number={100} color={type=== 'contratante'? '#FFB801':'#004CE8'} icon={type === 'contratante'? "PeopleSearch": "EveryUser"} />
-        <CardDates titulo={'Disponíveis'} number={100} color={'#00C247'} icon={type === 'contratante'? "PeopleSearch": "EveryUser"} />
-        <CardDates titulo={'Indisponíveis'} number={100} color={'#FF3333'} icon={type === 'contratante'? "PeopleSearch": "EveryUser"} />
+        <CardDates
+         titulo={'Total'}
+          number={type === "total" ? cardsDashboard.total: null}
+          color={type=== 'contratante'? '#FFB801':'#004CE8'}
+           icon={type === 'contratante'? PeopleSearch: EveryUser} />
 
+        <CardDates
+        titulo={'Disponíveis'}
+         number={type === 'disponivel' ?cardsDashboard.available: null}
+          color={'#00C247'}
+           icon={type === 'contratante'? PeopleSearch : EveryUser} />
 
-        {cardsDashboard.map((card) => (
-            <>
-            <CardDates titulo={'Total'} number={card} color={''} icon={''} />
-            <CardDates titulo={'Disponíveis'} number={card} color={''} icon={''} />
-            <CardDates titulo={'Indisponiveis'} number={card} color={''} icon={''} />
-            </>
+        <CardDates
+         titulo={'Indisponíveis'}
+          number={type === 'indisponivel' ? cardsDashboard.unavailable: null}
+           color={'#FF3333'}
+            icon={type === 'contratante'? PeopleSearch : EveryUser} />
 
-
-        ))}
       </DivContainer>
     </>
   )

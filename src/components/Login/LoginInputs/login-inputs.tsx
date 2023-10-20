@@ -1,8 +1,6 @@
 import { Button } from '@/components/ui'
 import {useState, useContext } from 'react'
 
-import { Inputs } from '@/components/ui/forms/input'
-
 
 import EyeOff from './icons/eye-off-line.png'
 import Eye from './icons/eyes.png'
@@ -20,6 +18,10 @@ import {
   Span,
   Divcontainer3
 } from './login-input-styled'
+import { ContextAuth } from '@/contexts/login/contextLogin'
+import { useNavigate } from 'react-router-dom'
+import { Inputs } from '@/components/ui/forms/input-Login/input'
+
 
 export const LoginInputs = () => {
 
@@ -28,12 +30,16 @@ export const LoginInputs = () => {
   const [password, setPassword] = useState('')
   const [rememberMe, setRememberMe] = useState(false)
   const [showPassword, setShowPassword] = useState(false)
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+ const {login} = useContext(ContextAuth)
+const navigate = useNavigate()
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
     console.log('Submit', { email, password })
-    login({email, password})
+    const result = await login(email, password)
+    if(result){
+      navigate('/')
+    }
 
   }
   const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -77,7 +83,7 @@ export const LoginInputs = () => {
             name='password'
             value={password}
             onChange={handlePasswordChange}
-            placeholder='Insira sua senha'
+            placeholder={'Insira sua senha'}
             />
                 <Span onClick={togglePasswordView}>
                   {showPassword ?<img src={Eye} alt="Open Eye" /> : <img src={EyeOff} alt="Off Eye" /> }
@@ -103,7 +109,7 @@ export const LoginInputs = () => {
              <Paragrafo>Esqueci minha senha</Paragrafo>
            </DivInputLabelCheckbox>
 
-           <Button type='submit'>Entrar</Button>
+           <Button type='submit' label={''} id={''}>Entrar</Button>
          </Divcontainer3>
 
         </form>
@@ -112,7 +118,5 @@ export const LoginInputs = () => {
   )
 }
 
-function login(arg0: { email: string; password: string }) {
-  throw new Error('Function not implemented.')
-}
+
 

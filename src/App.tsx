@@ -1,9 +1,7 @@
 import Router from './router/router'
 import GlobalStyles from '@/assets/styles/global-styles'
-import { LoginContainer } from './components/Login/login'
-import Layout  from './components/BaseLayout/baseLayout'
-import { OutUser } from './components/BaseLayout/header/out&user'
-import { ApiLogin } from './api/Api-login'
+/* import { ApiLogin } from './api/Api-login' */
+import {useApiLogin} from './api/Login/Api-login-token'
 
 
 function App() {
@@ -11,7 +9,8 @@ function App() {
     <>
       <GlobalStyles />
       <Router />
-      <ApiLogin/>
+
+
 
     </>
   )

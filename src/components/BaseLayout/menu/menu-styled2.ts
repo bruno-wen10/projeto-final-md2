@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Nav2 = styled.nav`
 background-color: #046639;
 width: 10vw;
-height: auto;
+height: 100vh 100%;
 `
 const DivContainer2 = styled.div`
 padding-top: 24px;

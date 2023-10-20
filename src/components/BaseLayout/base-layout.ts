@@ -2,9 +2,6 @@ import styled from "styled-components"
 
 const Section = styled.section`
 display: flex;
-
-
-
 `
 const Article = styled.article`
 display: flex;

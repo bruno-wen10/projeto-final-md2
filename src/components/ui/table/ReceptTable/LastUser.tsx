@@ -10,7 +10,7 @@ export default function LastUser() {
         {/* ISSO VAI PARA UM COMPONENTE SEPARADO */}
 
 
-        <LinkStyled to={'/UserRegistered'}>
+        <LinkStyled to={'/User-registered'}>
         <Span>
           Ver tudo <img src={Seta} alt="seta" />
         </Span>

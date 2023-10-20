@@ -19,7 +19,7 @@ height: 60px;
 function IconsColor({icon, color}:IconColor) {
   return (
     <IconColor color={color}>
-      {icon}
+      <img src={icon}/>
     </IconColor>
   )
 }

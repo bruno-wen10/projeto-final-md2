@@ -2,20 +2,55 @@ import User from '@/components/BaseLayout/icons/user2.png'
 import Out from '@/components/BaseLayout/icons/logout.png'
 import Union from '@/components/BaseLayout/icons/Union.png'
 import { useContext } from 'react'
-import { ContextAuth } from '@/contexts/context'
-import { Link } from 'react-router-dom'
+import { ContextAuth } from '@/contexts/login/contextLogin'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
+
+
+//function
+export const OutUser = ()=>{
+  const {logout}= useContext(ContextAuth)
+  const navigate = useNavigate()
+
+  const goUsersPage = ()=>{
+    navigate('/Profile')
+  }
+
+
+  return (
+    <Container>
+      <div>
+      <img src={Union} alt="sair" />
+      </div>
+
+      <DivPai>
+        <Div>
+          <img src={User} alt="User" onClick={goUsersPage} />
+          <P>Usuário</P>
+        </Div>
+        <Hr/>
+        <Div>
+          <img src={Out} alt="" onClick={logout} />
+          <P>Sair</P>
+        </Div>
+      </DivPai>
+    </Container>
+  )
+}
+//<Image src={Union} alt="sair" />
+//<img src={User} alt="User" /* onClick={navegar até usuario} *//>
+//<img src={Out} alt="" onClick={logout} />
 
 // Styled-Component
 import styled from 'styled-components'
 const Container = styled.div`
 position: absolute;
 right: 0px;
-
-
 `;
+
 const Image = styled.img`
 
 `;
+
 const DivPai = styled.div`
 position: relative;
 top: -150px;
@@ -46,36 +81,3 @@ font-weight: 400;
 line-height: 150%; /* 24px */
 letter-spacing: 0.2px;
 `
-
-
-
-
-
-//function
-export const OutUser = ()=>{
-  const {logout}= useContext(ContextAuth)
-
-
-  return (
-    <Container>
-      <div>
-      <img src={Union} alt="sair" />
-      </div>
-
-      <DivPai>
-        <Div>
-          <img src={User} alt="User" /* onClick={navegar até usuario} */ />
-          <P>Usuário</P>
-        </Div>
-        <Hr/>
-        <Div>
-          <img src={Out} alt="" onClick={logout} />
-          <P>Sair</P>
-        </Div>
-      </DivPai>
-    </Container>
-  )
-}
-//<Image src={Union} alt="sair" />
-//<img src={User} alt="User" /* onClick={navegar até usuario} *//>
-//<img src={Out} alt="" onClick={logout} />

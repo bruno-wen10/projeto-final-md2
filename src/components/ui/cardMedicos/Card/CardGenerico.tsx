@@ -7,7 +7,7 @@ import IconsColor from "./iconsCard"
 
 
 type MedicosProps = {
-  number:number
+  number: number | null
   titulo: string
   color: string
   icon: string
