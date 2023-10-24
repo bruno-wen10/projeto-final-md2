@@ -3,20 +3,13 @@
 import MedicosEContratante from '../../components/ui/cardMedicos/componenteMedicos'
 import UsersTable from '@/components/ui/table/ReceptTable/ReceptTable'
 
-
-
 export default function Dashboard() {
   return (
-          <DivContainer>
+    <DivContainer>
+      <MedicosEContratante />
 
-          <MedicosEContratante/>
-
-
-
-
-          <UsersTable/>
-
-          </DivContainer>
+      <UsersTable />
+    </DivContainer>
   )
 }
 
@@ -24,7 +17,7 @@ export default function Dashboard() {
 import styled from 'styled-components'
 
 const DivContainer = styled.div`
-display: flex;
-flex-direction: column;
-gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 `

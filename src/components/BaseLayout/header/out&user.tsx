@@ -5,21 +5,19 @@ import { useContext } from 'react'
 import { ContextAuth } from '@/contexts/login/contextLogin'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
 
-
 //function
-export const OutUser = ()=>{
-  const {logout}= useContext(ContextAuth)
+export const OutUser = () => {
+  const { logout } = useContext(ContextAuth)
   const navigate = useNavigate()
 
-  const goUsersPage = ()=>{
+  const goUsersPage = () => {
     navigate('/Profile')
   }
-
 
   return (
     <Container>
       <div>
-      <img src={Union} alt="sair" />
+        <img src={Union} alt="sair" />
       </div>
 
       <DivPai>
@@ -27,7 +25,7 @@ export const OutUser = ()=>{
           <img src={User} alt="User" onClick={goUsersPage} />
           <P>Usuário</P>
         </Div>
-        <Hr/>
+        <Hr />
         <Div>
           <img src={Out} alt="" onClick={logout} />
           <P>Sair</P>
@@ -43,41 +41,35 @@ export const OutUser = ()=>{
 // Styled-Component
 import styled from 'styled-components'
 const Container = styled.div`
-position: absolute;
-right: 0px;
-`;
+  position: absolute;
+  right: 0px;
+`
 
-const Image = styled.img`
-
-`;
+const Image = styled.img``
 
 const DivPai = styled.div`
-position: relative;
-top: -150px;
-left: 80px;
-width: 90px;
-display:flex ;
-flex-direction: column;
-gap: 20px;
-
+  position: relative;
+  top: -150px;
+  left: 80px;
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 `
 const Div = styled.div`
-display: flex;
-align-items: center;
-gap: 10px;
-
-
+  display: flex;
+  align-items: center;
+  gap: 10px;
 `
 const Hr = styled.hr`
-width: 100%;
+  width: 100%;
 `
 
-
 const P = styled.p`
-color: var(--cinzas-cinza-600, #757575);
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 150%; /* 24px */
-letter-spacing: 0.2px;
+  color: var(--cinzas-cinza-600, #757575);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  letter-spacing: 0.2px;
 `

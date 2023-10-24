@@ -1,17 +1,19 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 const Section = styled.section`
-display: flex;
+  display: flex;
 `
 const Article = styled.article`
-display: flex;
-flex-direction: column;
-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
 `
 const Main = styled.main`
-width: 100%;
+  width: 100%;
 `
 
 export default {
-Section, Article, Main
+  Section,
+  Article,
+  Main
 }

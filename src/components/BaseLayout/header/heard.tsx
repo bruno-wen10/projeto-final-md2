@@ -15,54 +15,49 @@ import { OutUser } from './out&user'
 //import type
 import { Me } from '@/Types/TypeRouter'
 
- //typagem da função
+//typagem da função
 type HamburgProps = {
-  onHamburgClik: () => void;
- }
+  onHamburgClik: () => void
+}
 
-export const HeardTop = ({onHamburgClik}:HamburgProps) => {
-  const {logout } = useContext(ContextAuth)
+export const HeardTop = ({ onHamburgClik }: HamburgProps) => {
+  const { logout } = useContext(ContextAuth)
 
   //router /me
   const [DataMe, setDataMe] = useState<Me>()
-  console.log( 'Result Api Me ')
+  console.log('Result Api Me ')
 
-  const meUser = async()=>{
-
-    try{
+  const meUser = async () => {
+    try {
       const apiDateMeUser = await getApiMeUser()
 
       setDataMe(apiDateMeUser)
 
       console.log(apiDateMeUser, 'Result Api Me ')
-
-
-    } catch(error){
-      console.error('Error:',error)
+    } catch (error) {
+      console.error('Error:', error)
     }
-
-
   }
- useEffect(()=>{
-  meUser()
-
- },[])
-
+  useEffect(() => {
+    meUser()
+  }, [])
 
   //Menu Sair
-  const [menuAberto, setMenuAberto] = useState(false);
+  const [menuAberto, setMenuAberto] = useState(false)
 
-  const toggleLogoutMenu = ()=>{
+  const toggleLogoutMenu = () => {
     setMenuAberto(!menuAberto)
   }
-
-
-
 
   return (
     <S.Header>
       <S.DivDates1>
-        <img src={MiniMenu} alt="mini menu" style={{ cursor: 'pointer' } }  onClick={onHamburgClik}  />
+        <img
+          src={MiniMenu}
+          alt="mini menu"
+          style={{ cursor: 'pointer' }}
+          onClick={onHamburgClik}
+        />
       </S.DivDates1>
       <S.DivDates>
         <div>
@@ -75,20 +70,20 @@ export const HeardTop = ({onHamburgClik}:HamburgProps) => {
         </div>
 
         <S.Div>
-
           <div>
-            <img src={logoutUser} alt="sair" onClick={toggleLogoutMenu} style={{ cursor: 'pointer' }}/>
+            <img
+              src={logoutUser}
+              alt="sair"
+              onClick={toggleLogoutMenu}
+              style={{ cursor: 'pointer' }}
+            />
           </div>
 
           {menuAberto && <OutUser />}
-
         </S.Div>
-
 
         {/* // CODIGO PARA USAR COM API */}
       </S.DivDates>
     </S.Header>
   )
 }
-
-

@@ -1,80 +1,90 @@
-import { ExitPage } from "@/components/ui/ExitPage/exit-page"
-import { useMeContex } from "@/contexts/Route-Me/Me"
-import { Button, DivButton, DivLine, Divider, Email, Name } from "../Datas-Profile/datas-profile-styled"
+import { ExitPage } from '@/components/ui/ExitPage/exit-page'
+import { useMeContex } from '@/contexts/Route-Me/Me'
+import {
+  Button,
+  DivButton,
+  DivLine,
+  Divider,
+  Email,
+  Name
+} from '../Datas-Profile/datas-profile-styled'
 import EditIcons from '../../icons/Edit.png'
 import Delet from '../../icons/Delet.png'
-import { ButtonExcluir, ContainerButton, Div2Container, Divcheck, Title } from "./change-password-styled"
-import { SButton } from "@/components/ui/button/button-login/butonStyled"
-
+import {
+  ButtonExcluir,
+  ContainerButton,
+  Div2Container,
+  Divcheck,
+  Title
+} from './change-password-styled'
+import { SButton } from '@/components/ui/button/button-login/butonStyled'
 
 export const ChangePassword = () => {
   const DataMe = useMeContex()
   return (
     <div>
-      <ExitPage page={DataMe?.firstName}/>
+      <ExitPage page={DataMe?.firstName} />
 
       <DivLine>
-     <Name>Nome</Name>
+        <Name>Nome</Name>
 
-     <Email>{DataMe?.firstName}</Email>
+        <Email>{DataMe?.firstName}</Email>
 
-     <DivButton>
-     <Button><img src={EditIcons} alt="edit" /></Button>
+        <DivButton>
+          <Button>
+            <img src={EditIcons} alt="edit" />
+          </Button>
+        </DivButton>
+      </DivLine>
+      <Divider />
 
-     </DivButton>
-    </DivLine>
-    <Divider/>
+      <DivLine>
+        <Name>E-mail</Name>
 
-    <DivLine>
-     <Name>E-mail</Name>
+        <Email>{DataMe?.email}</Email>
 
-     <Email>{DataMe?.email}</Email>
+        <DivButton>
+          <Button>
+            <img src={EditIcons} alt="edit" />
+          </Button>
+        </DivButton>
+      </DivLine>
 
-     <DivButton>
-     <Button><img src={EditIcons} alt="edit" /></Button>
+      <Divider />
 
-     </DivButton>
-    </DivLine>
+      <DivLine>
+        <Name>Senha</Name>
 
-    <Divider/>
+        <Email>***********</Email>
 
-    <DivLine>
-     <Name>Senha</Name>
+        <DivButton>
+          <Button>
+            <img src={EditIcons} alt="edit" />
+          </Button>
+        </DivButton>
+      </DivLine>
 
-     <Email>***********</Email>
+      <Divider />
 
-     <DivButton>
-     <Button><img src={EditIcons} alt="edit" /></Button>
+      <Div2Container>
+        <Title>Permissões</Title>
 
-     </DivButton>
-    </DivLine>
+        <Divcheck>
+          <input type="checkbox" />
+          <label htmlFor="Admin.geral">Admin. geral</label>
+        </Divcheck>
 
-    <Divider/>
+        <Divcheck>
+          <input type="checkbox" />
+          <label htmlFor="Admin. parcial">Admin. parcial</label>
+        </Divcheck>
+      </Div2Container>
 
-    <Div2Container>
-    <Title>Permissões</Title>
+      <ContainerButton>
+        <SButton>Salvar alterações</SButton>
 
-    <Divcheck>
-    <input type="checkbox" />
-    <label htmlFor="Admin.geral">Admin. geral</label>
-    </Divcheck>
-
-    <Divcheck>
-    <input type="checkbox" />
-    <label htmlFor="Admin. parcial">Admin. parcial</label>
-    </Divcheck>
-
-
-    </Div2Container>
-
-   <ContainerButton>
-   <SButton>Salvar alterações</SButton>
-
-   <ButtonExcluir>Excluir Perfil</ButtonExcluir>
-   </ContainerButton>
-
-
-
+        <ButtonExcluir>Excluir Perfil</ButtonExcluir>
+      </ContainerButton>
     </div>
   )
 }

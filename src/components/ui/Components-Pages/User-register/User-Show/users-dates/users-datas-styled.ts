@@ -1,17 +1,16 @@
-import styled from "styled-components";
-
+import styled from 'styled-components'
 
 export const Container = styled.div`
-display: flex;
-flex-direction: column;
-width: 100%;
-width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  width: 100%;
 `
 export const Divinputs = styled.div`
-display: flex;
-gap: 24px;
-padding-top: 15px;
-padding-bottom: 15px;
+  display: flex;
+  gap: 24px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 `
 const sharedStyle = `
   font-size: 14px;
@@ -21,12 +20,11 @@ const sharedStyle = `
   background-color: white;
   color: #757575;
   padding-left: 12px;
-`;
+`
 export const Span = styled.span`
   ${sharedStyle}
-`;
+`
 
 export const Div = styled.div`
   ${sharedStyle}
-`;
-
+`

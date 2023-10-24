@@ -33,19 +33,16 @@ export default MedicosEContratante
 
 //stylecomponents
 const Containe = styled.div`
- display: flex;
- gap: 15px;
- padding-left: 10px;
+  display: flex;
+  gap: 15px;
+  padding-left: 10px;
 `
 const ContainerCard = styled.div`
   display: flex;
   flex-direction: column;
   gap: 15px;
-
-
-  `
+`
 const Div = styled.div`
-
   width: 100%;
   height: 47.56%;
 

@@ -43,54 +43,53 @@ export const Section = styled.section`
 `
 
 export const Span = styled.span`
-position: absolute;
-left: 61%;
-bottom: 42%;
-color: #BDBDBD;
+  position: absolute;
+  left: 61%;
+  bottom: 42%;
+  color: #bdbdbd;
 `
 export const Img = styled.img`
-color: #BDBDBD;
+  color: #bdbdbd;
 `
 export const Divcontainer3 = styled.div`
-display: flex;
-flex-direction: column;
-gap: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 `
 export const DivInputLabelCheckbox = styled.div`
-display: flex;
-gap: 87px;
-padding-left:10px;
+  display: flex;
+  gap: 87px;
+  padding-left: 10px;
 `
 export const DivLabelIput = styled.div`
-display: flex;
-gap: 10px;
-color: rgba(33, 33, 33, 1);
+  display: flex;
+  gap: 10px;
+  color: rgba(33, 33, 33, 1);
 `
-export const  LabelLembreMe = styled.label`
-color: var(--cinzas-cinza-900, #212121);
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: 150%; /* 24px */
-letter-spacing: 0.2px;
+export const LabelLembreMe = styled.label`
+  color: var(--cinzas-cinza-900, #212121);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 24px */
+  letter-spacing: 0.2px;
 `
 export const LabelCheckbox = styled.label`
-color: var(--cinzas-cinza-900, #212121);
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: 150%; /* 24px */
-letter-spacing: 0.2px;
+  color: var(--cinzas-cinza-900, #212121);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 24px */
+  letter-spacing: 0.2px;
 `
 export const Paragrafo = styled.p`
+  color: var(--cinzas-cinza-700, #616161);
 
-color: var(--cinzas-cinza-700, #616161);
+  /* 16px Regular */
 
-/* 16px Regular */
-
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px; /* 24px */
-letter-spacing: 0.2px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 24px */
+  letter-spacing: 0.2px;
 `

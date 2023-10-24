@@ -1,45 +1,44 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const Div = styled.div`
-position: relative;
+  position: relative;
 `
 const Input = styled.input`
+  border: 1px solid #e0e0e0;
+  width: 100%;
+  height: 56px;
+  border-radius: 16px;
+  background: #fff;
+  padding: 0 16px;
+  outline: none;
+  &::placeholder {
+    color: #bdbdbd;
+  }
 
-border: 1px solid #E0E0E0;
-width: 100%;
-height: 56px;
-border-radius: 16px;
-background: #FFF;
-padding: 0 16px;
-outline: none;
-&::placeholder{
-  color: #BDBDBD;
-}
-
-&:focus, &:hover{
-border-color: #00C247;
-outline-color: #00C247;
-}
+  &:focus,
+  &:hover {
+    border-color: #00c247;
+    outline-color: #00c247;
+  }
 `
 
 const Label = styled.label`
-position: absolute;
-font-size: 14px;
-font-weight: 400;
-line-height: 19.6px; /* 19.6px */
-letter-spacing: 0.2px;
-background-color: white;
-color:#757575 ;
-left: 12px;
-top: -9px;
-
+  position: absolute;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.6px; /* 19.6px */
+  letter-spacing: 0.2px;
+  background-color: white;
+  color: #757575;
+  left: 12px;
+  top: -9px;
 `
 
-export default{
-  Div, Input, Label
+export default {
+  Div,
+  Input,
+  Label
 }
-
-
 
 /* width: 400px;
 height: 56px;

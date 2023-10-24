@@ -8,21 +8,21 @@ import {
   ImagemBola,
   ImagemSeta,
   H1,
-  Container } from "@/components/ui/ExitPage/user-show-styled"
+  Container
+} from '@/components/ui/ExitPage/user-show-styled'
 
 interface Page {
   page: string
 }
 
-export const ExitPage = ({page}:Page)=>{
-  return(
+export const ExitPage = ({ page }: Page) => {
+  return (
     <DivContainer>
-<Link style={{ textDecoration: 'none' }} to={'/User-registered'}>
-    <ImagemBola src={userout} />
-    <ImagemSeta src={setaUser} alt='seta user' />
-</Link>
-    <H1>{page}</H1>
-
-  </DivContainer>
+      <Link style={{ textDecoration: 'none' }} to={'/User-registered'}>
+        <ImagemBola src={userout} />
+        <ImagemSeta src={setaUser} alt="seta user" />
+      </Link>
+      <H1>{page}</H1>
+    </DivContainer>
   )
 }

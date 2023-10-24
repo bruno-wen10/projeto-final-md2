@@ -1,37 +1,37 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Section = styled.section`
   margin-top: 30px;
   margin-left: 40px;
-`;
+`
 
 export const DivSwitch = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
   bottom: 25px;
-`;
+`
 
 export const InputCheckbox = styled.div`
- display: flex;
- align-items: center;
- gap: 16px;
-`;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+`
 export const Label = styled.label`
-color: #757575;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 140%; /* 19.6px */
-letter-spacing: 0.2px;
+  color: #757575;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+  letter-spacing: 0.2px;
 `
 export const Span = styled.span`
-color: #212121;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 150%; /* 24px */
-letter-spacing: 0.2px;
+  color: #212121;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  letter-spacing: 0.2px;
 `
 export const Input = styled.input`
   width: 65px;
@@ -60,4 +60,4 @@ export const Input = styled.input`
   &:checked:before {
     left: 36px;
   }
-`;
+`

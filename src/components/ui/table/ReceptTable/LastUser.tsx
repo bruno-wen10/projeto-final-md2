@@ -1,23 +1,17 @@
-
 import Seta from './icons/seta.png'
 import { Link } from 'react-router-dom'
 
 export default function LastUser() {
   return (
-
-      <Div>
-        <SpanTitle>Ultimos usuários cadastrados</SpanTitle>{' '}
-        {/* ISSO VAI PARA UM COMPONENTE SEPARADO */}
-
-
-        <LinkStyled to={'/User-registered'}>
+    <Div>
+      <SpanTitle>Ultimos usuários cadastrados</SpanTitle>{' '}
+      {/* ISSO VAI PARA UM COMPONENTE SEPARADO */}
+      <LinkStyled to={'/User-registered'}>
         <Span>
           Ver tudo <img src={Seta} alt="seta" />
         </Span>
-        </LinkStyled>
-
-      </Div>
-
+      </LinkStyled>
+    </Div>
   )
 }
 
@@ -34,15 +28,15 @@ const SpanTitle = styled.span`
   letter-spacing: 0.2px;
 `
 const Div = styled.div`
-display: flex;
-justify-content: space-between;
-padding-right: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 5px;
 `
 export const LinkStyled = styled(Link)`
-text-decoration: none;
-color: var(--Sistema, #004CE8)
+  text-decoration: none;
+  color: var(--Sistema, #004ce8);
 `
 const Span = styled.span`
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 `

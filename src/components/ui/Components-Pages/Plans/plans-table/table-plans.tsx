@@ -28,7 +28,7 @@ export const PlanTable = () => {
     const fetchPlans = async () => {
       const result = await getPlans()
 
-      const Plans= result?.reduce((accumulator, currentValue) => {
+      const Plans = result?.reduce((accumulator, currentValue) => {
         const PlansTable = {
           planTitle: currentValue?.planTitle ? currentValue.planTitle : '-',
           values: currentValue.values,
@@ -71,4 +71,3 @@ export const PlanTable = () => {
     </>
   )
 }
-

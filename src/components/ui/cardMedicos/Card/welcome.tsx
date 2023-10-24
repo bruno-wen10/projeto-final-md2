@@ -60,8 +60,6 @@ const ContainerImg = styled.div`
 const ContainerDate = styled.div`
   display: flex;
   flex-direction: column;
-
-
 `
 const TagDate = styled.div`
   margin: 10px;
@@ -100,7 +98,7 @@ const Paragrafo = styled.p`
   letter-spacing: 0.2px;
 `
 const Welcome = styled.div`
-padding-left: 10px;
+  padding-left: 10px;
   width: 30vw;
   height: 58vh;
   border-radius: 24px;

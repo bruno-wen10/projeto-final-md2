@@ -16,16 +16,18 @@ interface Page {
   linkNavigate: string
 }
 
-export const ExitPage2 = ({ page, linkNavigate}: Page) => {
+export const ExitPage2 = ({ page, linkNavigate }: Page) => {
   const dynamicLink = `${linkNavigate}`
   const navigate = useNavigate()
   return (
     <DivContainer>
-      <div style={{ textDecoration: 'none' }} onClick={()=>navigate(linkNavigate)}>
+      <div
+        style={{ textDecoration: 'none' }}
+        onClick={() => navigate(linkNavigate)}
+      >
         <ImagemBola src={userout} />
         <ImagemSeta src={setaUser} alt="seta user" />
       </div>
-
 
       <H1>{page}</H1>
     </DivContainer>
